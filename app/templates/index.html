@@ -2,71 +2,55 @@
 {% import 'macros.html' as macro %}
 
 {% block styles%}
-    {{ super() }}
-    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
   integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 {% endblock %}
 {%block content%}
 
-<div class="col-sm-12"></div>
-    <div class="panel panel-default">
-        <div class="card">
-            <div class="panel-body" >
-            <blockquote class="blockquote mb-0 card-body">
-                <h2 class="title text-center">Quote of the Day</h2>
-                <p>{{quote.quote}}</p>
-                <footer class="blockquote-footer">
-                    <cite title="Source Title" style="color: #C4402A;" >{{quote.author| upper}}</cite>
-                    
-                </footer>
-               
-                
-              </blockquote>
-            </div>
-   </div>
+<div class="col-md-4"></div>
+
+<div class="card">
+  <div class="panel-body">
+    <blockquote class="blockquote mb-0 card-body">
+      <h2 class="title text-center">Best of Quotes</h2>
+      <p>{{quote.quote}}</p>
+      <footer class="blockquote-footer">
+        <cite title="Source Title" style="color: #C4402A;">{{quote.author| upper}}</cite>
+
+      </footer>
+
+
+    </blockquote>
+  </div>
+
 </div>
 
 
-<h1 class="title text-center"style="color:#FFFFFF"><strong>Blogs</strong></h1>
-{% for blog in blogs %} 
+<h1 class="title text-center"><strong>Blogs</strong></h1>
+{% for blog in blogs %}
 
-    <div class="col-md-12">
-        
-        <div class="text-centre">
-            
-            <div class="card text-white bg-info mb-3" style="width:93.5vw; margin-left: 10px;">
-                <h4 class="card-header text-centre" style="text-align: center;"><strong>Blog Title :{{blog.title}}</strong></h4>
-                <div class="card-body "style="text-align: center;">
-
-                <p class="card-title"style="text-align: center;"><strong> Blog Category: {{blog.category}}</strong></p>
-
-                <p class="card-text ">Blog Description: {{blog.content}}</p>
-
-                <p class="card-text " style="text-align: center;">Blogger: {{blog.created_by}}</p>
-              
-               <button type="button" class="btn btn-danger"a href="{{ url_for('main.delete_blog',id=blog.id)}}" class="text-danger" title="Delete Post"><small><i
-                class="fa fa-trash"></i></small></a></button> 
-               
-                
-                <button button type="button" class="btn btn-primary" style="margin:0.6vw; padding:0.5vw; text-decoration:none;"> <span class="foot"> <a href="{{ url_for('main.blog_details', id = blog.id)}}"style= "color:white; ">Comment</a></span></button>
-
-                 
-             
-             
-         
-            </div>
-        </div>
-         
-        </div>
-        
-    
-   
+<div " class="blogs">
+  <div style="background-color: tomato;" class="card col-md-6">
+  
+    <div  style="margin: 28px; padding: 3px; background-color: rgb(134, 197, 150);" class="card-body">
+      <h2  style="margin: 10px;" class="card-title"><strong>Blog Story :{{blog.title}}</strong></h2>
+      <h3 style="margin: 10px;" class="card-title"><strong>Category: {{blog.category}}</strong></h3>
+      <p style="margin: 10px;" class="card-text">Description: {{blog.content}}</p>
+      <p style="margin-left: 10px;" class="card-text ">Blogger: {{blog.created_by}}</p>
+  
+      <button type="button" class="btn btn-danger" a href="{{ url_for('main.delete_blog',id=blog.id)}}"
+        class="text-danger" title="Delete Post"><small><i class="fa fa-trash"></i></small></a></button>
+  
+  
+      <button button type="button" class="btn btn-primary" style="margin:0.6vw; padding:0.5vw; text-decoration:none;">
+        <span class="foot"> <a href="{{ url_for('main.blog_details', id = blog.id)}}"
+            style="color:white; ">Comment</a></span></button>
+    </div>
+  </div>
 </div>
 
-     
-    
+  {% endfor %}
 
-{% endfor %}
-
-{%endblock%}
+  {%endblock%}
