@@ -15,9 +15,9 @@
   <div class="panel-body">
     <blockquote class="blockquote mb-0 card-body">
       <h2 class="title text-center"><strong>Best of Quotes</strong></h2>
-      <p>{{quote.quote}}</p>
-      <footer class="blockquote-footer">
-        <cite title="Source Title" style="color: #C4402A;">{{quote.author| upper}}</cite>
+      <p style="color:blue; text-align: center;"><em>{{quote.quote}}</em></p>
+      <footer style="text-align: center;" class="blockquote-footer">
+        <cite title="Source Title" ><em>{{quote.author| upper}}</em></cite>
 
       </footer>
 
@@ -31,8 +31,8 @@
 <h1 class="title text-center"><strong>Blogs</strong></h1>
 {% for blog in blogs %}
 
-<div " class="blogs">
-  <div style="background-color: tomato;" class="card col-md-6">
+<div class="blogs">
+  <div style="background-color: #a19f9f;" class="card col-md-6">
   
     <div  style="margin: 28px; padding: 3px; background-color: rgb(134, 197, 150);" class="card-body">
       <h2  style="margin: 10px;" class="card-title"><strong>Blog Story :{{blog.title}}</strong></h2>
