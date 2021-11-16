@@ -1,45 +1,72 @@
 {% extends 'base.html'%}
-{% block content %}
+{% import 'macros.html' as macro %}
 
 {% block styles%}
     {{ super() }}
     <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 {% endblock %}
+{%block content%}
 
-<div class="container">
-  <div class="row">
-  <!-- displaying  Username-->
-    <div class="col-md-6 text-center cards cards1">
-      <h3>Username : {{user.username| capitalize}} </h3>
-      <p>Bio : {{user.bio}}</p>
-      <p>Email : {{user.email}}</p>
-      <!--Displaying user bio-->
-      {% if user.bio %}
-
-      {%else%}
-        <p> {{user.username| capitalize}} has no bio </p>
-      {% endif %}
-      {%if user == current_user %}
-      <a href="{{url_for('main.update_profile',uname=user.username)}}">Edit Profile</a>
-      {%endif%}
-    </div>
-    <!--Display profile photo-->
-    <div class="col-md-5 cards">
-      {% if user.profile_pic_path %}
-      <img src="{{url_for('static',filename=user.profile_pic_path)}}" alt="" class="img-thumbnail">
-      {%else%}
-      <p>No profile picture</p>
-      {% endif %}
-      {% if user == current_user %}
-      <form  action="{{url_for('main.update_pic',uname=user.username)}}" method="post" enctype = "multipart/form-data">
-        <input type="file"  name="photo" class="form-control" required>
-        <input type="submit">
-      </form>
-      {% endif %}
-    </div>
-
-  </div>
-  
-  </div>
+<div class="col-sm-12"></div>
+    <div class="panel panel-default">
+        <div class="card">
+            <div class="panel-body" >
+            <blockquote class="blockquote mb-0 card-body">
+                <h2 class="title text-center">Quote of the Day</h2>
+                <p>{{quote.quote}}</p>
+                <footer class="blockquote-footer">
+                    <cite title="Source Title" style="color: #C4402A;" >{{quote.author| upper}}</cite>
+                    
+                </footer>
+               
+                
+              </blockquote>
+            </div>
+   </div>
 </div>
-{% endblock %}
+
+
+<h1 class="title text-center"style="color:#FFFFFF"><strong>Blogs</strong></h1>
+{% for blog in blogs %} 
+
+    <div class="col-md-12">
+        
+        <div class="text-centre">
+            
+            <div class="card text-white bg-info mb-3" style="width:93.5vw; margin-left: 10px;">
+                <h4 class="card-header text-centre" style="text-align: center;"><strong>Blog Title :{{blog.title}}</strong></h4>
+                <div class="card-body "style="text-align: center;">
+
+                <p class="card-title"style="text-align: center;"><strong> Blog Category: {{blog.category}}</strong></p>
+
+                <p class="card-text ">Blog Description: {{blog.content}}</p>
+
+                <p class="card-text " style="text-align: center;">Blogger: {{blog.created_by}}</p>
+              
+               <button type="button" class="btn btn-danger"a href="{{ url_for('main.delete_blog',id=blog.id)}}" class="text-danger" title="Delete Post"><small><i
+                class="fa fa-trash"></i></small></a></button> 
+               
+                
+                <button button type="button" class="btn btn-primary" style="margin:0.6vw; padding:0.5vw; text-decoration:none;"> <span class="foot"> <a href="{{ url_for('main.blog_details', id = blog.id)}}"style= "color:white; ">Comment</a></span></button>
+
+                 
+             
+             
+         
+            </div>
+        </div>
+         
+        </div>
+        
+    
+   
+</div>
+
+     
+    
+
+{% endfor %}
+
+{%endblock%}

@@ -1,0 +1,95 @@
+[33mcommit de971f3af45ee4d3e816300e32f194f620e19b0b[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Tue Nov 16 00:47:14 2021 +0300
+
+    added profile and update
+
+[33mcommit 41abb50e29f168538c66bd7da36b638c84dc0fa4[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Tue Nov 16 00:40:52 2021 +0300
+
+    define user in views
+
+[33mcommit 04e026902e995c4f6286914261ddc216b884d916[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sun Nov 14 01:16:39 2021 +0300
+
+    created redirect for new users
+
+[33mcommit 0616d8bfe0e0c2dd1883d3653902cd26d1ae0f59[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sun Nov 14 01:07:33 2021 +0300
+
+    design the login form and behavior
+
+[33mcommit 8a1923c0bc091ff12fbebc869814837a48b54277[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sun Nov 14 01:03:20 2021 +0300
+
+    created login files
+
+[33mcommit d4b7d006e3dbec5357f832f2bb08ec89331d10b2[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sun Nov 14 01:00:07 2021 +0300
+
+    corrected the structure
+
+[33mcommit 07129ec80cf7291853223892c9209c3cdbf17108[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sat Nov 13 21:07:57 2021 +0300
+
+    created form to collect user data
+
+[33mcommit 8f5aab99bec690c224aa711e870957f799b24add[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sat Nov 13 20:59:01 2021 +0300
+
+    styled the home page
+
+[33mcommit de82b6303e60deb2ef2826308e0a53d3ff95cd62[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sat Nov 13 20:28:40 2021 +0300
+
+    added navbar to app
+
+[33mcommit c3b26d2e2d6d2c4ab277502af820870725c102d5[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sat Nov 13 20:26:45 2021 +0300
+
+    added navbar to app
+
+[33mcommit 36608bf69f69219014ef57ff8a9a86070a3b6b19[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sat Nov 13 19:57:03 2021 +0300
+
+    added requiremen
+
+[33mcommit 331a909725bbe4b1cf64318e39640b00400c4dd6[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sat Nov 13 19:33:51 2021 +0300
+
+    added requirementstp the application
+
+[33mcommit c579cce3127d6dd93955a5775348dd6e61b07965[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sat Nov 13 19:20:31 2021 +0300
+
+    created error file and designed error page
+
+[33mcommit fb91dae9e023282e484cc55343eaaa1ee4cae0cd[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sat Nov 13 19:13:15 2021 +0300
+
+    imported blueprint to the application
+
+[33mcommit 3176c8087a9968f1050cc82500a6cca9a42e995e[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sat Nov 13 19:01:36 2021 +0300
+
+    added login form to the application
+
+[33mcommit 48b3233abe66310c75832f0efabf68f8bebe4f23[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: mnubi <rodger.kamau@student.moringaschool.com>
+Date:   Sat Nov 13 18:51:14 2021 +0300
+
+    initialize repo
