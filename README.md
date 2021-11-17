@@ -1,6 +1,6 @@
 # My Blog
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
+This project was generated with Python3.8
 [](https://github.com/Mnubi/My-Blog.git)
 #### {Rodger Kamau}, {November, 17 2021}
 
